@@ -1,5 +1,5 @@
 
-import { Component, input } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 import { Country } from '../../../../country/interface/country.interfe';
 import { DecimalPipe } from '@angular/common';
 
@@ -10,4 +10,8 @@ import { DecimalPipe } from '@angular/common';
 })
 export class CountryInformation {
   country = input.required<Country>()
+
+  currentYear = computed(() =>{
+    return new Date().getFullYear()
+  })
 }
