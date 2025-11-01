@@ -1,7 +1,9 @@
 <!--county-search-input-->
 <country-search-input
 (value)="query.set($event)"
-placeholder ="Buscar por país"/>
+placeholder ="Buscar por país"
+[intialValue]="query()"
+/>
 
 <!--country-list-->
 <country-list
